@@ -10,7 +10,7 @@ const axiosClient = axios.create({
 
 })
 
-const getLatestProducts =()=> axiosClient.get('/products')
+const getLatestProducts =()=> axiosClient.get('/products?populate=*')
 
 export default {
     getLatestProducts

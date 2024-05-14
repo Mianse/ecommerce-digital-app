@@ -10,7 +10,7 @@ const Hero = () => {
 */}
 
 <section
-  className="relative bg-[url(/background.jpg)] bg-cover bg-center bg-no-repeat"
+  className="relative bg-[url(/BACKGROUND3.jpg)] bg-cover bg-center bg-no-repeat"
 >
   <div
     className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
