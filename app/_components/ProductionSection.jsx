@@ -17,6 +17,13 @@ const getLatestProducts_=()=>{
       setProductList(resp.data.data)
     })
   }
+  const filterProductList = (category)=>{
+    const result = ProductList.filter(item=>
+      item.attributes.category == category
+      
+    )
+    return result
+  }
   return productList&& (
     <div className=' px-10 md:px-20'>
       <h2 className='font-medium text-[20px] my-3'>  Brand New</h2>

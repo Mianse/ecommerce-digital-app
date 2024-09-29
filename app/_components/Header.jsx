@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <header className="bg-white">
   <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-    <Image src='/logo1.svg' alt='logo' width={90} height={40}/>
+    <Image src='/logo1.svg' alt='logo' href="/" width={90} height={40}/>
 
     <div className="flex flex-1 items-center justify-end md:justify-between">
     <nav aria-label="Global" className="hidden md:block">

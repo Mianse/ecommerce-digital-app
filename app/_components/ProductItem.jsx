@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import { ChevronRightSquare } from 'lucide-react';
 
 const ProductItem = ({product}) => {
@@ -22,7 +23,7 @@ const ProductItem = ({product}) => {
   }
 
   return (
-  <div>
+  <Link href={'/product-detail/'+product.id}>
       <div className='hover:border p-1 rounded-lg border-blue-300'>
         <Image src={src} alt='banner' height={400} width={350} className='rounded-t-lg h-[350px] object-cover'/>
         <div className='flex justify-between items-center bg-gray-400 p-3 rounded-b-lg'>
@@ -39,7 +40,7 @@ const ProductItem = ({product}) => {
       </div>
       
       
-    </div>
+    </Link>
   )
 }
 
