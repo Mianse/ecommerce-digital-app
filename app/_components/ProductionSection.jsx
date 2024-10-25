@@ -25,7 +25,7 @@ const getLatestProducts_=()=>{
     return result
   }
   return productList&& (
-    <div className=' px-10 md:px-20'>
+    <div id='products' className=' px-10 md:px-20'>
       <h2 className='font-medium text-[20px] my-3'>  Brand New</h2>
       <ProductList productList={productList}/>
 

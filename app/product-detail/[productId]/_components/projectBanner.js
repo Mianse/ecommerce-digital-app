@@ -9,7 +9,7 @@ const ProjectBanner = ({ product }) => {
 
   return (
 
-    <div className="relative w-full h-64"> {/* Set a height for the container */}
+    <div className="relative w-64 h-64"> {/* Set a height for the container */}
       {product ? <Image 
         src={imageUrl || '/images/placeholder-image.png'} // Fallback image if URL is not available
         alt={product?.attributes?.banner?.data?.[0]?.attributes?.alternativeText || 'banner'}

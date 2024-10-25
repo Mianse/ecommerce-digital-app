@@ -1,11 +1,11 @@
-"use client"
-import GlobalApi from '@/app/_utils/GlobalApi'
+'use client'
 import { useEffect,useState } from 'react'
-import Breadcrumb from '@/app/_components/Breadcrumb'
+import Breadcrumb from '../../_components/Breadcrumb'
 import ProjectBanner from './_components/projectBanner'
 import ProjectDetail from './_components/projectDetail'
-import ProductList from '@/app/_components/ProductList.jsx'
+import ProductList from '../../_components/ProductList'
 import { usePathname } from 'next/navigation'
+import GlobalApi from '../../_utils/GlobalApi'
 const productDetails = ({params}) => {
   //use to get url path
 
@@ -35,6 +35,9 @@ const productDetails = ({params}) => {
           setProductList(resp.data.data)
         }
       )
+    }
+    const getProductByCategory=()=>{
+      GlobalApi
     }
   return (
     <div className='p-5 py-13 px-10 md:px-28'>
