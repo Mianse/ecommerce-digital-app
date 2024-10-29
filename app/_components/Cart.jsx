@@ -1,17 +1,16 @@
-import React, { useContext, useEffect } from 'react';
-import { CartContext } from '../_context/CartContext';
-
+import React, { useState, useEffect } from 'react';
+import { appCartContext } from '../_context/CartContext.jsx';
 const Cart = () => {
-    const { cart } = useContext(CartContext);
+    const { cart } = appCartContext()
+
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        console.log('current cart', cart);
-    }, [cart]);
-
-    useEffect(()=>{
-      localStorage.setItem('cart', JSON.stringify(cart));
-    
-    },[cart])
+      setIsMounted(true);
+    }, []);
+  
+    if (!isMounted) return null; // Prevent rendering on the server
+  
 
     return cart.length > 0 ? (
         <div className='h-[300px] w-[250px] bg-gray-400 z-10 rounded-md border shadow-sm absolute mx-10 right-10 p-5 top-12 overflow-auto'>
